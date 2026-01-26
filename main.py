@@ -38,7 +38,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-token = 'MTQ1MzQzNTQ5OTYwNjcwNDE3OQ.Gz6fb7.hQ9b7Yn3D-urdoG2y7l90yb0JsbWiGzK7B5lWg'
+token = os.getenv('DISCORD_TOKEN')
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 intents = discord.Intents.default()
 intents.message_content = True
